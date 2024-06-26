@@ -2,6 +2,9 @@
 Copy files from GCS to S3 based on GCS events
 
 ## usage
+Edit https://github.com/mozilla-it/webservices-infra/blob/main/productdelivery/tf/prod/cloudfunction.tf and change `source_code_zip_suffix` to deploy whatever is on the `main` branch of this repo.
+
+Or, do it the wrong way:
 gcloud --project [productdelivery_project_name] \
 functions deploy copy_to_s3 \
 --runtime python39 \
